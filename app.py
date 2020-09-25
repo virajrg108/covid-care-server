@@ -1,11 +1,11 @@
-from flask import Flask, request, json, jsonify
+from flask import Flask, request, json, jsonify, render_template
 import model
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='./build', static_url_path='/')
 
-@app.route("/")
-def hello():
-    return "Hello World!"
+@app.route('/')
+def index():
+    return app.send_static_file('index.html')
 
 
 @app.route("/<name>")
