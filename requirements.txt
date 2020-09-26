@@ -1,0 +1,7 @@
+flask
+dnspython
+bcrypt
+jsonify
+Flask-Cors==1.10.3
+random2
+uuid
