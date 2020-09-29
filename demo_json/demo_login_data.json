@@ -1,4 +1,10 @@
 {
-	"Email":"utkarshsharma650@gmail.com",
-	"Password": "vadapav"
+	"email":"utkarshsharma650@gmail.com",
+	"password": "vadapav"
+}
+
+// This is fix for doctor
+{
+	"email": "agbi@gmail.com",
+	"password": "doctor_123"
 }

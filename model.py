@@ -1,12 +1,12 @@
 def predict(data):
-    fever = data["Fever"]
-    sb = data["Short_breathe"]
-    cough = data["Cough"]
-    weakness = data["Weakness"]
-    travel = data["Travelled"]
-    close_Contact_covid = data["Close_Contact_covid"]
-    pneumonia = data["Pneumonia"]
-    if ((fever and (sb or weakness or cough) and (close_contact or exposure)) or pnemonia=Test):
-        return "yes"
+    fever = data["fever"]
+    sb = data["breathe"]
+    cough = data["cough"]
+    weakness = data["weakness"]
+    travel = data["travelled"]
+    close_contact = data["contact"]
+    pneumonia = data["pneumonia"]
+    if (fever and (sb or weakness or cough) and (close_contact or pneumonia)):
+        return True
     else:
-        return "no"
+        return False

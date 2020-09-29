@@ -3,8 +3,10 @@ from flask import Flask, json, request, jsonify, make_response
 import model
 from flask_cors import CORS
 from datetime import datetime
-import tiny
+
+import login_first_time
 import hashlib
+import patient
 
 app = Flask(__name__, static_folder='./build', static_url_path='/')
 CORS(app)
@@ -25,31 +27,67 @@ def login():
     #dt_object = datetime.fromtimestamp(timestamp)    
     #d['timestamp'] = timestamp
 
-    hashed_password = hashlib.sha256(d['Password'].encode()).hexdigest()
-    d['Password'] = hashed_password
+    hashed_password = hashlib.sha256(d['password'].encode()).hexdigest()
+    d['password'] = hashed_password
 
     print(d)
-    status = tiny.verify_login(d)
+    status = login_first_time.verify_login(d)
 
     return jsonify(status)
 
-@app.route('/register', methods=['POST'])
+@app.route('/signup', methods=['POST'])
 def register():
     #print(request.data)
+    d = json.loads(request.data.decode('utf8').replace("'", '"'))
+    
+    #now = datetime.now()
+    #timestamp = datetime.timestamp(now)
+    #dt_object = datetime.fromtimestamp(timestamp)    
+    #d['timestamp'] = timestamp
+
+    hashed_password = hashlib.sha256(d['password'].encode()).hexdigest()
+    d['password'] = hashed_password
+
+    status = login_first_time.register_data(d)
+    return jsonify(status)
+
+@app.route('/firstchat', methods = ['POST'])
+def firstchat():
+    d = json.loads(request.data.decode('utf8').replace("'", '"'))
+    status = patient.first_chat(d)
+    
+    return jsonify(status)
+
+@app.route('/chat', methods = ['POST'])
+def chat():
     d = json.loads(request.data.decode('utf8').replace("'", '"'))
     
     now = datetime.now()
     timestamp = datetime.timestamp(now)
     #dt_object = datetime.fromtimestamp(timestamp)    
-    d['timestamp'] = timestamp
+    d['timestamp'] = int(timestamp)
 
-    hashed_password = hashlib.sha256(d['Password'].encode()).hexdigest()
-    d['Password'] = hashed_password
+    status = patient.daily_chat(d)
 
-    status = tiny.register_data(d)
     return jsonify(status)
 
 
+@app.route('/get_patient_records/<email>')
+def get_patient_records(email):
+
+    status = patient.get_records(email)
+
+    return jsonify(status)
+    
+
+@app.route('/get_patient_details/<email>')
+def get_patient_details(email):
+
+    status = patient.get_details(email)
+
+    return jsonify(status)
+
+"""
 @app.route("/get_patient_first_data", methods=["GET", "POST"])
 def take_input():
     if request.method == 'POST':
@@ -59,8 +97,8 @@ def take_input():
     #    return jsonify({"message":"text not found"})
 
     return jsonify({"Testing_required": outcome})
-
+"""
 
 if __name__ == "__main__":
-    tiny.create_db()
+    login_first_time.create_db()
     app.run(debug=True)

@@ -1,0 +1,14 @@
+{
+	"email":"utkarshsharma650@gmail.com",
+	"gender": "male",
+	"age": 22,
+	"fever": true,
+	"breathe": true,
+	"cough": true,
+	"weakness": false,
+	"travelled": false,
+	"contact": false,
+	"pneumonia": false,
+	"testName": "Covid-19",
+	"value": 0.16
+}
