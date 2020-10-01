@@ -1,4 +1,4 @@
 flask==1.1.2
 Flask-Cors==3.0.9
-tinydb==4.1.1
+tinydb
 hashlib
