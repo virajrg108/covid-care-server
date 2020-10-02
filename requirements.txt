@@ -4,5 +4,5 @@ tinydb==4.1.1
 hashlib
 pickle-mixin
 numpy==1.18.5
-sklearn==0.23.1
+sklearn==0.23.2
 pandas==0.24.2
