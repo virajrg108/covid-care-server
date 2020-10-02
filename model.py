@@ -13,7 +13,7 @@ def predict(data):
     symptoms = []
     symptoms.extend([fever, sb, cough, weakness, travel,
                      close_contact, pneumonia])
-    pkl_filename = "model-covid.pkl"
+    pkl_filename = "./model-covid.pkl"
     with open(pkl_filename, 'rb') as file:
         covid_classifier_pkl = pickle.load(file)
     arr_symptoms = np.array(symptoms)
