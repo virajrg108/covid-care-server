@@ -1,0 +1,49 @@
+<<<<<<< HEAD
+{"_default": {"1": {"email": "utkarshsharma650@gmail.com", "condition": "worse", "respRate": 75, "oxSat": 90, "bp": 140, "temp": 102.2, "timestamp": 1601663190}, "2": {"email": "utkarshsharma650@gmail.com", "condition": "better", "respRate": 99, "oxSat": 90, "bp": 140, "temp": 98.2, "timestamp": 1601663205}, "3": {"email": "viraj.gawde123@gmail.com", "condition": "better", "respRate": 76, "oxSat": 23, "bp": 123, "temp": 98.2, "timestamp": 1601663219}, "4": {"email": "viraj.gawde123@gmail.com", "condition": "better", "respRate": 76, "oxSat": 63, "bp": 132, "temp": 99.2, "timestamp": 1601663235}, "5": {"email": "viraj.gawde123@gmail.com", "condition": "noChange", "respRate": 76, "oxSat": 83, "bp": 120, "temp": 99.2, "timestamp": 1601664643}}}
+=======
+{
+    "_default": {
+        "1": {
+            "email": "utkarshsharma650@gmail.com",
+            "condition": "better",
+            "respRate": 75,
+            "oxSat": 98,
+            "bp": 170,
+            "temp": 98.3
+        },
+        "2": {
+            "email": "utkarshsharma650@gmail.com",
+            "condition": "better",
+            "respRate": 75,
+            "oxSat": 98,
+            "bp": 170,
+            "temp": 98.3
+        },
+        "3": {
+            "email": "utkarsh650@gmail.com",
+            "condition": "worse",
+            "respRate": 75,
+            "oxSat": 98,
+            "bp": 170,
+            "temp": 98.3
+        },
+        "4": {
+            "email": "utkarsh650@gmail.com",
+            "condition": "better",
+            "respRate": 75,
+            "oxSat": 98,
+            "bp": 170,
+            "temp": 98.3
+        },
+        "5": {
+            "email": "utkarsh650@gmail.com",
+            "condition": "better",
+            "respRate": 75,
+            "oxSat": 98,
+            "bp": 170,
+            "temp": 98.3,
+            "timestamp": 1601397829.701173
+        }
+    }
+}
+>>>>>>> ae84681d643eee51c770612b69cfc581a36bca30
