@@ -24,3 +24,21 @@ def predict(data):
     #    return True
     # else:
     #    return False
+
+
+def severity(test1, test2):
+    # only one test required
+    if test1 != 0:
+        if test1 < 8:
+            return "mild"
+        elif test1 < 15:
+            return "moderate"
+        else:
+            return "severe"
+    else:
+        if test2 < 2:
+            return "mild"
+        elif test2 < 4:
+            return "moderate"
+        else:
+            return "severe"
