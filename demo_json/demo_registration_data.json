@@ -6,6 +6,14 @@
 	"role": "patient"
 }
 
+{
+	"name": "Viraj Gawde",
+	"email": "viraj.gawde123@gmail.com",
+	"password": "bahar_ka_nahi!",
+	"address": "Raigad",
+	"role": "patient"
+}
+
 // Final for doctor
 {
 	"name": "AGBI Doctor",

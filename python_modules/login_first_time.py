@@ -20,6 +20,10 @@ def verify_login(data):
         if(search_result[0]['password'] == data['password']):
             return_data['return_message'] = "Password correct"
             return_data['role'] = "patient"
+            
+            return_data['name'] = search_result[0]['name']
+            return_data['age'] = search_result[0]['age']
+            return_data['gender'] = search_result[0]['gender']
             return_data['status'] = 200
 
             return return_data

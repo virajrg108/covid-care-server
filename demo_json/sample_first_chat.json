@@ -8,7 +8,5 @@
 	"weakness": false,
 	"travelled": false,
 	"contact": false,
-	"pneumonia": false,
-	"testName": "Covid-19",
-	"value": 0.16
+	"pneumonia": false
 }
